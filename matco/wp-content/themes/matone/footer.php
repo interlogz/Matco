@@ -125,6 +125,11 @@
   interval: 2000
 })
 	$("#menu-main-menu").append("<li class='menu-item menu-item-type-custom'><a href='#' class='ereg-btn' data-toggle='modal' data-target='#exampleModal'>Apply Now</a></li>");
+
+
+	$("#check-btn").click(function(){
+  $("#menu-main-menu").toggleClass("left-zero");
+});
 </script>
 
 <?php 	wp_footer(); ?>
