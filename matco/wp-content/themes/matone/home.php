@@ -22,7 +22,7 @@
  ?>
     <div class="carousel-item <?php if ($index == 1) { echo ' active'; } ?>">
     	<div class="row padd-t100">
-    		<div class="col-6 bannTxt-padd">
+    		<div class="col-sm-12 col-md-6 bannTxt-padd">
     			<div>
     			<h2 class="txt-upper banner-head">Top Hr</h2>
     			<h2 class="txt-upper banner-head">Consultancy</h2>
@@ -33,7 +33,7 @@
     				<div class="apply-btn">Apply Now</div>
     			</div>
     		</div>
-    		<div class="col-6">
+    		<div class="col-sm-12 col-md-6">
     			 <img class="d-block w-100" src="<?= $serimg[0];?>" alt="First slide">
     		</div>
     	</div>
@@ -55,15 +55,15 @@
 	</div>
 <div class="container-fluid c-padd abt-bg">
 	<div class="container">
-	<div class="row align-items-center">
-		<div class="col-6 abt-txt">
+	<div class="row align-items-center grid-row">
+		<div class="col-sm-12 col-md-6 abt-txt">
 			<h2>Who are we?</h2>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 			<p class="mb-1m">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 			</p>
 			<a href="<?= site_url('about-us');?>"><div class="learn-btn d-inline">Learn More</div></a>
 		</div>
-		<div class="col-6">
+		<div class="col-sm-12 col-md-6">
 			<img src="<?= site_url();?>/wp-content/uploads/2021/04/banner.png" class="abt-img img-fluid">
 		</div>
 	</div>
@@ -100,7 +100,7 @@
         	$serimg= wp_get_attachment_image_src(get_post_thumbnail_id( $serv->ID),'single-post-thumbnail');
 
         	?>
-		<div class="col-4 service-padd">
+		<div class="col-sm-12 col-md-4 service-padd">
 			<img src="<?= $serimg[0];?>" class="img-fluid cust-img">
 			<div class="ser-wrap">
 				<h4><?= $serv->post_title;?></h4>
@@ -115,12 +115,12 @@
 <section>
 	<div class="container c-padd">
 		<div class="row  align-items-center">
-			<div class="col-6">
+			<div class="col-sm-12 col-md-6">
 				<h2>WHY AVAIL SERVICES FROM MATCO ENTERPRISE?</h2>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 			</div>
-			<div class="col-6">
+			<div class="col-sm-12 col-md-6">
 				<img src="<?= site_url();?>/wp-content/uploads/2021/04/abt.png" class="img-fluid">
 			</div>
 		</div>
@@ -129,8 +129,8 @@
 <section>
 	<div class="flex-wrapper">
 		<div class="second-head ch-bg">Contact</div>
-		<div class="flex-container d-flex">
-			<div class="col-6 nopadd">
+		<div class="flex-container d-flex row">
+			<div class="col-sm-12 col-md-6 nopadd">
 				<div class="banner">
 	<div class="banner-inner">
 						<h3 class="let-head">Let's Connect</h3>
@@ -162,7 +162,7 @@
 </div>
 
 			</div>
-			<div class="col-6 nopadd">
+			<div class="col-sm-12 col-md-6 nopadd">
 				<p class="submit-txt">Submit your Details</p>
 				   <form id="contactForm" class="contactform">
 				<div class="d-form">
