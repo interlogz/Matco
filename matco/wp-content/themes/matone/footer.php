@@ -22,11 +22,7 @@
 			<div class="col">
 				<p>Important Links</p>
 				<ul class="footer-menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Home</a></li>
+          <?= wp_nav_menu(); ?>
 				</ul>
 			</div>
 			<div class="col">
@@ -119,6 +115,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
 </body>
 <script type="text/javascript">
 	$('.carousel').carousel({
@@ -131,6 +128,6 @@
   $("#menu-main-menu").toggleClass("left-zero");
 });
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <?php 	wp_footer(); ?>
 </html>
