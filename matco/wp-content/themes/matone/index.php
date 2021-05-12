@@ -20,7 +20,7 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
  <div class="container">
  	<div class="row">
-<h4 class="padd-t100"><?php the_title(); ?></h4>  
+<h4 class="padd-t100 page-head"><?php the_title(); ?></h4>  
         <div class="entry">
             <?php the_content(); ?>
         </div><!-- entry -->
