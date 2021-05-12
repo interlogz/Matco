@@ -20,8 +20,8 @@
 		</div>
 		<div class="col-md-6">
 			<div class="head-mp">
-				<p class="fa fa-envelope"><a href="#" class="padd-l10">Matcogroup@gmail.com</a></p>
-				<p class="fa fa-phone"><a href="#" class="padd-l10">8122728445</a></p>
+				<p class="fa fa-envelope"><a href="mailto:matcogroup@gmail.com" class="padd-l10">Matcogroup@gmail.com</a></p>
+				<p class="fa fa-phone"><a href="tel:+91-8122728445" class="padd-l10">+91-8122728445</a></p>
 			</div>
 			</div>
 			<div class="col-md-3">
@@ -37,9 +37,9 @@
 	</div>
     <header>
     	<div class="float-logo">
-    		<img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+    		<a href="<?= home_url();?>"><img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 			$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-			echo $image[0];?>" class="logo">
+			echo $image[0];?>" class="logo"></a>
         </label>
     	</div>
         <nav>
@@ -47,10 +47,8 @@
             <input type="checkbox" id="check-btn" name="check-btn">
             <label for="check-btn" class="check-btn"></label>
              
-          <div class="head-menu">
-               <?= wp_nav_menu();?>
-                 
-      		</div>
+			<?= wp_nav_menu();?>
+
         </nav>
     </header>
 

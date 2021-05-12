@@ -24,9 +24,7 @@
     	<div class="row padd-t100">
     		<div class="col-sm-12 col-md-6 bannTxt-padd">
     			<div>
-    			<h2 class="txt-upper banner-head">Top Hr</h2>
-    			<h2 class="txt-upper banner-head">Consultancy</h2>
-    			<p>We are also Succesful trader your trusted partner in real estate, Building construction.</p>
+    			<?=  $serv->post_content; ?>
     			</div>
     			<div class="d-flex">
     				<a href="<?= site_url('hr-banner');?>"><div class="home-learn">Learn More</div></a>
@@ -57,33 +55,22 @@
 	<div class="container">
 	<div class="row align-items-center grid-row">
 		<div class="col-sm-12 col-md-6 abt-txt">
-			<h2>Who are we?</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-			<p class="mb-1m">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-			</p>
+		<?php echo get_post_field('post_content', 37);?>
+
 			<a href="<?= site_url('about-us');?>"><div class="learn-btn d-inline">Learn More</div></a>
 		</div>
 		<div class="col-sm-12 col-md-6">
-			<img src="<?= site_url();?>/wp-content/uploads/2021/04/banner.png" class="abt-img img-fluid">
+			<?php $abt_image = wp_get_attachment_image_src( get_post_thumbnail_id( 37 ), 'single-post-thumbnail' ); ?>
+			<img src="<?= $abt_image[0];?>" class="abt-img img-fluid">
+		
 		</div>
 	</div>
 	</div>
 </div>
-<section class="service-banner">
+<section class="service-banner" id="services">
 <div class="container c-padd">
 	<div class="row">
-		<div class="col-md-12"><h2 class="text-center">Recruitment services</h2></div>
-		<div class="col-12">
-			<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-		</div>
-		<div class="col-12">
-			<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-		</div>
-		<div class="col-md-12">
-			<div class="text-center">
-				<div class="learn-btn">Enquire Us</div>
-			</div>
-		</div>
+<?php echo get_post_field('post_content', 83);?>
 				<?php 
 		$args = array(
 			'post_type' =>'service',
@@ -104,7 +91,7 @@
 			<img src="<?= $serimg[0];?>" class="img-fluid cust-img">
 			<div class="ser-wrap">
 				<h4><?= $serv->post_title;?></h4>
-				<p><?= $serv->post_content;?></p>
+				<p><?= wp_trim_words($serv->post_content,10);?></p>
 				<a href="#" class="r-font">Learn More</a>
 			</div>
 		</div>
@@ -116,48 +103,24 @@
 	<div class="container c-padd">
 		<div class="row  align-items-center">
 			<div class="col-sm-12 col-md-6">
-				<h2>WHY AVAIL SERVICES FROM MATCO ENTERPRISE?</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<?php echo get_post_field('post_content', 82);?>
+				
 			</div>
 			<div class="col-sm-12 col-md-6">
-				<img src="<?= site_url();?>/wp-content/uploads/2021/04/abt.png" class="img-fluid">
+				<?php $ser_image = wp_get_attachment_image_src( get_post_thumbnail_id( 37 ), 'single-post-thumbnail' ); ?>
+				<img src="<?= $ser_image[0];?>" class="img-fluid">
 			</div>
 		</div>
 	</div>
 </section>
-<section>
+<section id="contact">
 	<div class="flex-wrapper">
 		<div class="second-head ch-bg">Contact</div>
 		<div class="flex-container d-flex row">
 			<div class="col-sm-12 col-md-6 nopadd">
 				<div class="banner">
 	<div class="banner-inner">
-						<h3 class="let-head">Let's Connect</h3>
-				<p class="small-txt pl-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				<p class="small-txt pl-20">Lorem Ipsum is simply dummy text of the printing </p>
-				<div class="f-20">
-					<i class="fa fa-map-marker soci-icon"></i>
-				<div class="add-wrap">
-					<p class="f-20">Address</p>
-					<p class="f-bold">123 st., New York</p>
-				</div>
-				</div>
-
-								<div class="f-20">
-					<i class="fa fa-phone soci-icon"></i>
-				<div class="add-wrap">
-					<p class="f-20">Let's Talk</p>
-					<p class="f-bold">123 st., New York</p>
-				</div>
-			</div>
-<div class="f-20">
-					<i class="fa fa-envelope soci-icon"></i>
-				<div class="add-wrap">
-					<p class="f-20">General Support</p>
-					<p class="f-bold">123 st., New York</p>
-				</div>
-			</div>
+		<?php echo get_post_field('post_content', 84);?>
 	</div>
 </div>
 

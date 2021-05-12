@@ -5,16 +5,12 @@
 		<div class="col-md-12">
 			<h2 class="text-center">About us</h2>
 		</div>
-		<div class="col-6">
-			<img src="http://localhost/matco/wp-content/uploads/2021/04/banner.png" class="img-fluid">
+		<div class="col-sm-12 col-md-6">
+			<?php $ser_image = wp_get_attachment_image_src( get_post_thumbnail_id( 56 ), 'single-post-thumbnail' ); ?>
+			<img src="<?= $ser_image[0];?>" class="img-fluid">
 		</div>
-		<div class="col-6">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="col-sm-12 col-md-6">
+			<p><?php echo get_post_field('post_content', 56);?></p>
 		</div>
 	</div>
 </div>

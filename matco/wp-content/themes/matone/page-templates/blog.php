@@ -34,7 +34,7 @@ get_header();
 			 		<div>
 			 			<p><?= wp_trim_words($serv->post_content,15);?></p>
 			 		</div>
-			 		<a href="<?= $serv->guid;?>"><div>read More</div></a>
+			 		<a href="<?= $serv->guid;?>"><div class="blog-btn">read More</div></a>
 			 	</div>
 			 <?php } ?>
 			 </div>
